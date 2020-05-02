@@ -44,7 +44,8 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemAboutAction() {
-		loadView("/gui/About.fxml",x -> {} );
+		loadView("/gui/About.fxml", x -> {
+		});
 	}
 
 	@Override
@@ -64,7 +65,7 @@ public class MainViewController implements Initializable {
 			mainVBox.getChildren().clear();
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(newVBox.getChildren());
-			
+
 			T controller = loader.getController();
 			InitializingAction.accept(controller);
 
